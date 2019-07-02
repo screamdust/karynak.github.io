@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+	<html>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<title> Каріна <3 </title>
+		<script src="jquery-3.4.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="page_format" class="main">
+		<header>
+			<div class="name">
+				<h1> Happy Birthday, My Love </h1>
+			</div>
+			<nav class="common">
+				<ul>
+					<li><a href="index.html"> Головна </a></li>
+					<li><a href="gallery.html"> Ніколи не забудемо </a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div id="meet">
+				<p> Привіт Сонечко. Я хочу привітати тебе з Твої Днем Народження. Я радію разом з тобою і хотів би тобі дещо розказати <button id="but1"> Нажми на мене щоб розпочати </button> </p>
+			</div>
+			<div id="change">
+				<script>
+				$(document).ready(function(){
+					$("#but1").click(function(){
+					$("#meet").text("У цей чудовий день, дозволь мені показати що ти і я - ділимо одне життя на двох. З Днем Народження, Зяблик");
+					$("#video").show();
+					})
+					})
+				</script>
+			</div>
+			<div id="video">
+				<video width="480" height="360" onended="Wow()" controls>
+				<source src="My video.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
+				<script>
+					function Wow() {
+						document.getElementById("video").style.display = "none";
+						var g = document.getElementById("meet").innerHTML = " ";
+						var t = document.createTextNode("Я тебе надзвичайно сильно Кохаю!");
+						var f = document.createTextNode(" Рухаємось далі?");
+						var but2 = document.createElement("button");
+						but2.id = "next";
+						document.getElementById("meet").appendChild(f);
+						document.getElementById("meet").appendChild(t);
+						document.getElementById("meet").appendChild(but2);
+						but2.appendChild(f);
+						document.getElementById("next").style.border = "thick solid #0000FF";
+						document.getElementById("next").style.borderColor = "yellow";
+						document.getElementById("next").style.font = "italic bold 36px arial,serif";
+						document.getElementById("next").addEventListener("click", pageChange);
+					}	
+					function pageChange() {
+					window.location.href = "past.html"
+					}
+				</script>
+			</div>
+		</main>
+		<footer>
+			<p> Sharing the life, sharing the love </p>
+		</footer>
+		</div>
+	</body>
+	</html>

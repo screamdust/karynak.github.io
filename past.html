@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+	<html>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<title> Каріна <3 </title>
+		<script src="jquery-3.4.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="page_format_past">
+		<header>
+			<div class="name">
+				<h1> The Heart full of happiness and love </h1>
+			</div>
+			<nav class="common">
+				<ul>
+					<li><a href="index.html"> Головна </a></li>
+					<li><a href="gallery.html"> Ніколи не забудемо </a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="dropdown">
+				<button onclick="DropDown()" class="dropbtn"> Timeline of us </button>
+					<div id="myDropdown" class="dropdown-content">
+						<a><button id="Pastpage" class="manipulators"> Past </button></a>
+						<a><button id="Presentpage" class="manipulators"> Present </button></a>
+						<a><button id="Futurepage" class="manipulators"> Future </button></a>
+				    </div>
+			</div>
+			<script>
+				function DropDown() {
+				  document.getElementById("myDropdown").classList.toggle("show");
+				}
+				window.onclick = function(event) {
+				  if (!event.target.matches('.dropbtn')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+					  var openDropdown = dropdowns[i];
+					  if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					  }
+					}
+				  }
+				}
+				</script>
+				<script>
+				$(document).ready(function(){
+					$("#Pastpage").click(function(){
+						$("#pasttext").toggleClass("Timeless");
+						$("#pasttext").toggleClass("Timeless_a");
+						})
+						})
+				</script>
+				<script>
+				$(document).ready(function(){
+					$("#Presentpage").click(function(){
+						$("#presenttext").toggleClass("Timeless");
+						$("#presenttext").toggleClass("Timeless_a");
+					})
+					})
+				</script>
+				<script>
+				$(document).ready(function(){
+					$("#Futurepage").click(function(){
+						$("#futuretext").toggleClass("Timeless");
+						$("#futuretext").toggleClass("Timeless_a");
+					})
+					})
+				</script>
+			</div>
+			<div id="pasttext" class="Timeless">
+				<p> We have gone through many...Both hardships and happy times. We have been struck by a storm, 
+				but kept going side-by-side. As the time went by, we have changed a lot, yet one thing remained 
+				unchanged - the undying love and sense of unity. Both You and me knew - the brightest sunset 
+				comes after the darkest night </p>
+				<img id="stroom" src="storm.jpg" alt="Storming way" height="271px" width="1024px">
+			</div>
+			<div id="presenttext" class="Timeless">
+				<p> Thy shall be doomed who does not learn from their mistakes. I have said it many time and will keep repeating
+				that You are my World, My Sun, My God. I cannot, neither do I want to, imagine the world without You. You are 
+				my most precious treasure, my family. I will do everything to fix the wounds of past and save You from uncertainty
+				of the future. </p>
+				<img id="passion" src="passion.jpg" alt="Sassion" height="318px" width="1024px">
+			</div>
+			<div id="futuretext" class="Timeless">
+				<p> The tale of true and passionate love that survives wars and outlives billions of people and planets.
+				There is no future for You or for me, there is only OUR future. Everything that is or was - are stories to tell
+				and lessons to remember. I gave You my life, I gave You my heart and I do not care about the future as long
+				as You are near. I wish You Happy Birthday and Love You more than the words can deliver</p>
+			</div>
+		</main>
+		<footer>
+			<p> Sharing the life, sharing the love </p>
+		</footer>
+	</body>
+	</html>
